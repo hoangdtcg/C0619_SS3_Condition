@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Vui</title>
+</head>
+<body>
+<form>
+<input type="checkbox" name="good"  id="cb1" onclick="checkbox('good')"/> Good<br/>
+<input type="checkbox" name="fast"  id="cb2" onclick="checkbox('fast')"/> Fast<br/>
+<input type="checkbox" name="cheap" id="cb3" onclick="checkbox('cheap')"/>  Cheap<br/>
+</form>
+<script>
+    function checkbox(name){
+        cb1=document.getElementById("cb1");
+        cb2=document.getElementById("cb2");
+        cb3=document.getElementById("cb3");
+        if(cb1.name=='good'&& cb1.checked==true){
+            if(cb2.checked==true&&cb3.checked==true){
+                cb2.checked=false;
+            }
+        }else if(cb2.name=='fast' && cb2.checked==true){
+            if(cb3.checked==true&&cb1.checked==true){
+                cb3.checked=false;
+            }
+        }else if(cb3.name=='cheap'&& cb3.checked==true){
+            if(cb1.checked==true&&cb2.checked==true){
+                cb1.checked=true;
+            }
+        }
+
+
+    }
+</script>
+</body>
+</html>
