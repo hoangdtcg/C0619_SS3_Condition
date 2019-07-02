@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi Ảnh</title>
+    <style>
+        img {
+            border: black;
+            width: 600px;
+            height: 120px;
+
+        }
+        div{
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="div1" style="border: 20px solid black" >
+    <img id="anh1" name="pic" src="images/khi1.jpg" onclick="changeImage(1)" alt="khi1">
+    <br>
+    <img id="anh2" name="pic" src="images/khi2.jpg" onclick="changeImage(2)" alt="khi2">
+    <br>
+    <img id="anh3" name="pic" src="images/khi3.jpg" onclick="changeImage(3)" alt="khi3">
+    <br>
+    <img id="anh4" name="pic" src="images/khi4.jpg" onclick="changeImage(4)" alt="khi4">
+    <br>
+    <img id="anh5" name="pic" src="images/khi5.jpg" onclick="changeImage(5)" alt="khi5">
+</div>
+
+
+<script>
+
+
+    function changeImage(index) {
+        let nameKhi = "khi" + index;
+        let nameMeo = "meo" + index;
+        let nameGau = "gau" + index;
+        let img = document.getElementById("anh" + index);
+        if (img.alt == nameKhi) {
+            img.alt = nameMeo;
+        } else if (img.alt == nameMeo) {
+            img.alt = nameGau;
+        } else if (img.alt == nameGau) {
+            img.alt = nameKhi;
+        }
+        img.src = "images/" + img.alt + ".jpg";
+        check();
+
+    }
+
+
+    function check() {
+        let img1 = document.getElementById("anh1");
+        let img2 = document.getElementById("anh2");
+        let img3 = document.getElementById("anh3");
+        let img4 = document.getElementById("anh4");
+        let img5 = document.getElementById("anh5");
+        let div = document.getElementById('div1')
+
+
+        if (img1.alt == 'khi1' && img2.alt == 'khi2' && img3.alt == 'khi3' && img4.alt == 'khi4' && img5.alt == 'khi5') {
+            div.style.borderColor = "red";
+        } else if (img1.alt == 'meo1' && img2.alt == 'meo2' && img3.alt == 'meo3' && img4.alt == 'meo4' && img5.alt == 'meo5') {
+            div.style.borderColor = "red";
+        } else if (img1.alt == 'gau1' && img2.alt == 'gau2' && img3.alt == 'gau3' && img4.alt == 'gau4' && img5.alt == 'gau5') {
+            div.style.borderColor = "red";
+        }else div.style.borderColor = "black";
+    }
+
+</script>
+</body>
+</html>

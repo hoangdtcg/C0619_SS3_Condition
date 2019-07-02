@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</title>
+</head>
+<body>
+<script>
+    let income = Number(prompt('Doanh Thu Tháng 6 Năm 2019 ($$$)'));
+    let rose1;
+    let rose2;
+    let rose3;
+    let totalrose;
+//tren 1000000 -> 2% tren 100000 => 4% tren 10000 6%
+    if (income > 1000000) {
+        rose3 = (income - 100000 - 10000) * 2 / 100;
+        rose2 = (100000 - 10000) * 4 / 100;
+        rose1 = 10000 * 6 / 100;
+        totalrose = rose1 + rose2 + rose3;
+
+        alert('You are excellent saler! Your money is: $' + totalrose);
+    } else if (income > 100000) {
+        rose2 = (income - 10000) * 4 / 100;
+        rose1 = 10000 * 6 / 100;
+        totalrose = rose2 + rose1
+        alert('You are good saler! Your money is: $' + totalrose);
+    } else if (income > 10000) {
+        rose1 = income * 6 / 100;
+        alert('Your money is: $' + rose);
+    }else alert('what the hell are you doing?!?!')
+
+
+</script>
+
+
+</body>
+</html>

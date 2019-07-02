@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</title>
+</head>
+<body>
+
+<script>
+    let diemKiemTra = Number(prompt('Nhập điểm kiểm tra: '));
+    let diemThiGiuaKi = Number( prompt('Nhập điểm thi giữa kì: '));
+    let diemThiCuoiKi = Number (prompt('Nhập điểm thi cuối kì: '));
+
+    let diemTrungBinh = (diemKiemTra + (diemThiGiuaKi*2) + (diemThiCuoiKi*3)) /6;
+
+    if(diemTrungBinh > 10){
+        alert('Chắc trêu');
+    }else if(diemTrungBinh > 7.9){
+        alert('Học sinh giỏi');
+    }else if(diemTrungBinh > 6.4){
+        alert('Học sinh tiên tiến');
+    }else if(diemTrungBinh >4.9){
+        alert('Học sinh trung binh')
+    }else if (diemTrungBinh > 0){
+        alert('Học kém thế!?');
+    }else {
+        alert('Xin nhập lại điểm');
+    }
+
+
+
+
+</script>
+
+</body>
+</html>
