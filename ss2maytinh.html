@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<porm>
+<table>
+    <tr>
+        <td><input id="display" type="" value="" readonly placeholder="0"/></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td><button type="button" onclick="nhapPhim(this.value)" value="7">7</button></td>
+        <td><button type="button" onclick="nhapPhim(this.value)" value="8">8</button></td>
+        <td><button type="button" onclick="nhapPhim(this.value)" value="9">9</button></td>
+        <td><button type="button" onclick="nhapPhim(this.value)" value="+">+</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="nhapPhim(this.value)" value="4">4</button></td>
+        <td><button type="button" onclick="nhapPhim(this.value)" value="5">5</button></td>
+        <td><button type="button" onclick="nhapPhim(this.value)" value="6">6</button></td>
+        <td><button type="button" onclick="nhapPhim(this.value)" value="-">-</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="nhapPhim(this.value)" value="1">1</button></td>
+        <td><button type="button" onclick="nhapPhim(this.value)" value="2">2</button></td>
+        <td><button type="button" onclick="nhapPhim(this.value)" value="3">3</button></td>
+        <td><button type="button" onclick="nhapPhim(this.value)" value="*">*</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="phimXoa(this.value)" value="">C</button></td>
+        <td><button type="button" onclick="nhapPhim(this.value)" value="0">0</button></td>
+        <td><button type="button" onclick="display.value = eval(display.value)" value="=">=</button></td>
+        <td><button type="button" onclick="nhapPhim(this.value)" value="/">/</button></td>
+    </tr>
+</table>
+</porm>
+<script>
+    function nhapPhim(n) {
+        display.value = display.value + n;
+    }
+    function phimXoa() {
+        display.value = "";
+
+
+    }
+
+</script>
+
+</body>
+</html>

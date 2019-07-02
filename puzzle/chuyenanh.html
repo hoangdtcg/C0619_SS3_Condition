@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    img {
+        width: 400px;
+
+        height: 100px;
+    }
+</style>
+<body>
+<img src="anh/khi1.jpg" id="anh1" onclick="doiAnh1()" alt="khi1">
+<br>
+<img src="anh/khi2.jpg" id="anh2" onclick="doiAnh2()" alt="khi2">
+<br>
+<img src="anh/khi3.jpg" id="anh3" onclick="doiAnh3()" alt="khi3">
+<br>
+<img src="anh/khi4.jpg" id="anh4" onclick="doiAnh4()" alt="khi4">
+<br>
+<img src="anh/khi5.jpg" id="anh5" onclick="doiAnh5()" alt="khi5">
+<script>
+    let img1 = document.getElementById('anh1');
+    let img2 = document.getElementById('anh2');
+    let img3 = document.getElementById('anh3');
+    let img4 = document.getElementById('anh4');
+    let img5 = document.getElementById('anh5');
+
+    function doiAnh1() {
+        if (img1.alt == "khi1") {
+            img1.alt = "meo1";
+        } else if (img1.alt == "meo1") {
+            img1.alt = "khi1";
+        }
+        img1.src = "anh/" + img1.alt + ".jpg";
+        check()
+    }
+
+    function doiAnh2() {
+        if (img2.alt == "khi2") {
+            img2.alt = "meo2";
+        } else if (img2.alt == "meo2") {
+            img2.alt = "khi2";
+        }
+        img2.src = "anh/" + img2.alt + ".jpg";
+        check()
+    }
+
+    function doiAnh3() {
+        if (img3.alt == "khi3") {
+            img3.alt = "meo3";
+        } else if (img3.alt == "meo3") {
+            img3.alt = "khi3";
+        }
+        img3.src = "anh/" + img3.alt + ".jpg";
+        check()
+    }
+
+    function doiAnh4() {
+        if (img4.alt == "khi4") {
+            img4.alt = "meo4";
+        } else if (img4.alt == "meo4") {
+            img4.alt = "khi4";
+        }
+        img4.src = "anh/" + img4.alt + ".jpg";
+        check()
+    }
+
+    function doiAnh5() {
+        if (img5.alt == "khi5") {
+            img5.alt = "meo5";
+        } else if (img5.alt == "meo5") {
+            img5.alt = "khi5";
+        }
+        img5.src = "anh/" + img5.alt + ".jpg";
+        check()
+    }
+
+    function check() {
+        if (img1.alt == "khi1" && img2.alt == "khi2" && img3.alt == "khi3" && img4.alt == "khi4" && img5.alt == "khi5") {
+            alert('keckec')
+        }
+        if
+        (img1.alt == "meo1" && img2.alt == "meo2" && img3.alt == "meo3" && img4.alt == "meo4" && img5.alt == "meo5") {
+            alert('meomeo')
+        }
+    }
+</script>
+</body>
+</html>

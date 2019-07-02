@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload ='docReady()'>
+<img id="anh" src="phimChon" style="position:absolute;left:0; top: 0;" height="200" width="200"/>
+<script>
+    function phimLen() {
+        let a = document.getElementById('anh');
+        a.style.top = parseInt(a.style.top) - 5 + 'px';
+    }
+
+    function phimXuong() {
+        let a = document.getElementById('anh');
+        a.style.top = parseInt(a.style.top) + 5 + 'px';
+    }
+
+    function phimTrai() {
+        let a = document.getElementById('anh');
+        a.style.left = parseInt(a.style.left) - 5 + 'px';
+    }
+
+    function phimPhai() {
+        let a = document.getElementById('anh');
+        a.style.left = parseInt(a.style.left) + 5 + 'px';
+    }
+
+    function phimChon(evt) {
+        switch (evt.keyCode) {
+            case 38:
+                phimLen();
+                break;
+            case 40:
+                phimXuong();
+                break;
+            case 37:
+                phimTrai();
+                break;
+            case 39:
+                phimPhai();
+                break;
+        }
+    }
+function docReady() {
+    window.addEventListener('keydown',phimChon);
+}
+</script>
+</body>
+</html>

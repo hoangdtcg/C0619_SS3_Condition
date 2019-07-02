@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <img id="anh" style="left: 100px;position: absolute" src="images/ball.png" height="200" width="200"/>
+    <input type="button" value="click me" onclick="sangPhai()"/>
+</form>
+<script>
+   let a = document.getElementById('anh');
+
+    function sangPhai() {
+        console.log(a.style.left);
+        a.style.left = parseInt(a.style.left) + 5 + 'px';
+
+    }
+
+</script>
+</body>
+</html>
