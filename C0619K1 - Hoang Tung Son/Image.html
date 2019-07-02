@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>image</title>
+</head>
+<body>
+<div>
+    <img id="autumn" src="Image/autumn.jpg" alt="autumn" width="400px" height="200px" onclick="swapImage(this.id)">
+</div>
+<div>
+    <img id="winter" src="Image/winter.jpg" alt="winter" width="400px" height="200px" onclick="swapImage2(this.id)">
+</div>
+<div>
+    <img id="summer" src="Image/summer.jpg" alt="summer" width="400px" height="200px" onclick="swapImage3(this.id)">
+</div>
+<div>
+    <img id="spring" src="Image/spring.jpg" alt="spring" width="400px" height="200px" onclick="swapImage4(this.id)">
+</div>
+
+<script>
+
+    function swapImage(id) {
+        let img = document.getElementById(id);
+        let name = document.getElementById(id).alt;
+        switch (name) {
+            case 'spring':
+                name = "summer";
+                break;
+            case 'summer':
+                name = "autumn";
+                break;
+            case 'autumn':
+                name = "winter";
+                break;
+            case 'winter':
+                name = "spring";
+                break;
+        }
+        img.src = "Image/" + name + ".jpg";
+        document.getElementById(id).alt = name;
+        checkImage();
+    }
+
+    function checkImage() {
+        let image1 = document.getElementById('spring').alt;
+        let image2 = document.getElementById('summer').alt;
+        let image3 = document.getElementById('autumn').alt;
+        let image4 = document.getElementById('winter').alt;
+
+        if (image1 == image2 && image2 == image3 && image3 == image4) {
+
+            alert('You Win');
+
+        }
+    }
+</script>
+</body>
+</html>
