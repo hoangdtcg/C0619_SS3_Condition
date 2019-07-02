@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <img id="img1" src="cat1.jpg" alt="cat1" onclick="ClickMe(1)" width="800" />
+    <img id="img2" src="cat2.jpg" alt="cat2" onclick="ClickMe(2)" width="800" />
+    <img id="img3" src="cat3.jpg" alt="cat3" onclick="ClickMe(3)" width="800" />
+    <img id="img4" src="cat4.jpg" alt="cat4" onclick="ClickMe(4)" width="800" />
+    <img id="img5" src="cat5.jpg" alt="cat5" onclick="ClickMe(5)" width="800" />
+</form>
+<script>
+    function ClickMe(index) {
+        let namecat="cat" + index;
+        let namepanda = "panda" +index;
+        let namemonkey = "monkey" +index;
+         let img = document.getElementById("img"+ index);
+         switch (img.alt) {
+             case namecat:
+                 img.alt=namemonkey;
+                 break;
+             case namemonkey :
+                 img.alt=namepanda;
+                 break;
+             case namepanda:
+                 img.alt=namecat;
+                 break;
+
+         }
+         document.getElementById("img"+index).src = img.alt +".jpg";
+        let imga= document.getElementById("img1").alt;
+        let imgb= document.getElementById("img2").alt;
+        let imgc = document.getElementById("img3").alt;
+        let imgd = document.getElementById("img4").alt;
+        let imge = document.getElementById("img5").alt;
+        if ((imga =="cat1" && imgb =="cat2" && imgc =="cat3" && imgd =="cat4" && imge =="cat5")||
+            (imga =="monkey1" && imgb =="monkey2" && imgc =="monkey3" && imgd=="monkey4"&& imge=="monkey5")||
+        (imga =="panda1" && imgb =="panda2" && imgc =="panda3" && imgd=="panda4" &&imge=="panda5"))
+        {
+        alert("right");}
+    }
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
