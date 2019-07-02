@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game puzzle</title>
+</head>
+<body>
+<img src="images-puzzle/cat1.jpg" id="image1" alt="cat1" onclick="clickImage(1)"/>
+<span id="checked"></span> <br>
+<img src="images-puzzle/monkey2.jpg" id="image2" alt="monkey2" onclick="clickImage(2)"/> <br>
+<img src="images-puzzle/cat3.jpg" id="image3" alt="cat3" onclick="clickImage(3)"/> <br>
+<img src="images-puzzle/cat4.jpg" id="image4" alt="cat4" onclick="clickImage(4)"/> <br>
+<img src="images-puzzle/monkey5.jpg" id="image5" alt="monkey5" onclick="clickImage(5)"/> <br>
+<script>
+    function clickImage(index) {
+        let cat = "cat" + index;
+        let monkey = "monkey" + index;
+        let img = document.getElementById("image" + index);
+        switch (img.alt) {
+            case cat:
+                img.alt = monkey;
+                break;
+            case monkey:
+                img.alt = cat;
+                break;
+
+        }
+        document.getElementById("image" + index).src = "images-puzzle/" + img.alt + ".jpg"
+        let altImage1 = document.getElementById('image1').alt;
+        let altImage2 = document.getElementById('image2').alt;
+        let altImage3 = document.getElementById('image3').alt;
+        let altImage4 = document.getElementById('image4').alt;
+        let altImage5 = document.getElementById('image5').alt;
+        if ((altImage1 == 'cat1' && altImage2 == 'cat2' && altImage3 == 'cat3' && altImage4 == 'cat4' && altImage5 == 'cat5') ||
+            (altImage1 == 'monkey1' && altImage2 == 'monkey2' && altImage3 == 'monkey3' && altImage4 == 'monkey4' && altImage5 == 'monkey5')
+        ) {
+            document.getElementById('checked').innerHTML = 'chinh xac';
+        } else {
+            document.getElementById('checked').innerHTML = '';
+        }
+    }
+
+
+</script>
+</body>
+</html>
